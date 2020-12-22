@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="TripLog.Views.DetailPage">
+    <ContentPage.Content>
+        <Grid RowDefinitions="4*, Auto, 1*">
+            <maps:Map x:Name="map" Grid.RowSpan="3"/>
+            <BoxView Grid.Row="1" BackgroundColor="White" Opacity="0.8"/>
+            <StackLayout Padding="10" Grid.Row="1" >
+                <Label x:Name="title" HorizontalOptions="Center"/>
+                <Label x:Name="date" HorizontalOptions="Center"/>
+                <Label x:Name="rating" HorizontalOptions="Center"/>
+                <Label x:Name="notes" HorizontalOptions="Center"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
