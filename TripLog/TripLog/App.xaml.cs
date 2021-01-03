@@ -10,7 +10,7 @@ namespace TripLog
         {
             InitializeComponent();
 
-            MainPage =  new NavigationPage(new MainPage());
+            MainPage =  new NavigationPage(new TakePictureView());
         }
 
         protected override void OnStart()

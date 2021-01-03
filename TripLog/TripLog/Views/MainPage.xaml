@@ -6,11 +6,11 @@
         <ToolbarItem Text="New" Clicked="New_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <CollectionView x:Name="trips" SelectionMode="Single" SelectionChanged="Trips_SelectionChanged"  >
+        <CollectionView x:Name="trips" SelectionMode="Single" SelectionChanged="Trips_SelectionChanged" ItemsSource="{Binding LogEntries}"  >
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10" ColumnDefinitions="1*,3*" RowDefinitions="Auto, Auto" >
-                        <Label Grid.RowSpan="2" Text="{Binding Date, StringFormat='{0:MMM d}'}" />
+                        <Label Grid.RowSpan="2" Text="{Binding Date, StringFormat='{0:MM}'}" />
                         <Label Grid.Column="1" Text="{Binding Title}" FontAttributes="Bold" />
                         <Label Grid.Column="1" Grid.Row="1" Text="{Binding Notes}" />
                     </Grid>
